@@ -13,6 +13,7 @@
       <el-col :span="3">
         <el-button type="primary" @click="radomReturn" size="large">生成随机</el-button>
     </el-row>
+      <p>{{radomRest}}</p>
   </div>
 </template>
 <style>
@@ -26,7 +27,8 @@
       return {
         num1: 0,
         num2: 0,
-        radom: 0 // 
+        radom: 0, // 
+        radomRest:""
       }
     },
 
@@ -38,7 +40,7 @@
 
       },
       radomReturn() {
-        console.log(Math.floor(Math.random() * (this.num2 - this.num1))+this.num1)
+        this.radomRest=Math.floor(Math.random() * (this.num2 - this.num1))+this.num1
       }
 
     },
