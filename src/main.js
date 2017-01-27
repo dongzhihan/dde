@@ -44,6 +44,11 @@ const routes = [
     path: '/tt', component: function (resolve) {
     require(['./components/test.vue'], resolve);
   }
+  },
+  {
+    path: '/radom', component: function (resolve) {
+    require(['./components/radom.vue'], resolve);
+  }
   }
 ]
 
