@@ -36,6 +36,7 @@
       }
     },
     methods: {
+    
       rodamChange: function (value) {
     
         this.num2 = value
@@ -62,7 +63,7 @@
           let k = array[i]
           array[i] = array[j]
           array[j] = k
-           
+        console.log()
         }
        ,
         createArray() {

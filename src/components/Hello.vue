@@ -24,6 +24,7 @@
 
 <script>
   import { rdText } from 'radon-ui'
+  
   export default {
 
     name: 'hello',
@@ -40,7 +41,7 @@
         }
       }
     },
-    
+  
     methods: {
       goWeather(){
         this.$router.push({path: '/foo'})
