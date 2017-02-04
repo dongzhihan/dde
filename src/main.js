@@ -50,6 +50,7 @@ const routes = [
     require(['./components/radom.vue'], resolve);
   }
   }
+ 
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置

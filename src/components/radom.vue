@@ -61,7 +61,7 @@
           let k = array[i]
           array[i] = array[j]
           array[j] = k
-         
+           
         }
        ,
         createArray() {
