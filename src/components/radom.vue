@@ -46,32 +46,28 @@
         
       }
         ,
-       shuffle()
-       {
-             console.log(this.arr)
-         this.createArray();
-         for(let i=this.num1;i<=this.num2;i++)
-         {
-         let j=Math.floor(Math.random() * (this.num2 - this.num1))+this.num1
-      
-         this.swap(this.arr,i,j)
-         }
-         console.log(this.arr[0])
-     
-       }  ,
-       swap(array,i,j)
-       
-       { 
-         let k=array[i]   
-         array[i]=array[j]
-         array[j]=k
-       
-       }
+        shuffle() {
+          console.log(this.arr)
+          this.createArray();
+          for (let i =0; i <= (this.num2-this.num1); i++) {
+            let j = Math.floor(Math.random() * (this.num2 - this.num1)) 
+
+            this.swap(this.arr, i, j)
+          }
+          console.log(...this.arr)
+
+        },
+        swap(array, i, j) {
+          let k = array[i]
+          array[i] = array[j]
+          array[j] = k
+
+        }
        ,
         createArray() {
-   
-          for (var i = this.num1; i < this.num2; i++) {
-            this.arr.push({ name: i })
+           this.arr=[]
+          for (var i = 0; i <= (this.num2-this.num1); i++) {
+            this.arr.push(i+this.num1)
           }
         }
     },
