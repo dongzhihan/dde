@@ -12,6 +12,7 @@
       </el-col>
       <el-col :span="3">
         <el-button  type="primary" @click="shuffle" size="large">生成随机</el-button>
+    
     </el-row>
           
       <p>{{radomRest}}</p>
@@ -21,8 +22,9 @@
   
 </style>
 <script>
-  export default {
 
+  export default {
+    
     data() {
       return {
         num1: 0,
@@ -33,10 +35,9 @@
         arr:[]
       }
     },
-
     methods: {
       rodamChange: function (value) {
-        
+    
         this.num2 = value
         this.radom = value
          
@@ -55,7 +56,7 @@
             this.swap(this.arr, i, j)
           }
           console.log(...this.arr)
-
+        
         },
         swap(array, i, j) {
           let k = array[i]
