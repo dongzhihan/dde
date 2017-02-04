@@ -11,14 +11,14 @@
         <el-input-number v-model="num2" :min="radom" :max="10"></el-input-number>
       </el-col>
       <el-col :span="3">
-        <el-button type="primary" @click="radomReturn" size="large">生成随机</el-button>
+        <el-button  type="primary" @click="shuffle" size="large">生成随机</el-button>
     </el-row>
+          
       <p>{{radomRest}}</p>
   </div>
 </template>
 <style>
-
-
+  
 </style>
 <script>
   export default {
@@ -28,21 +28,52 @@
         num1: 0,
         num2: 0,
         radom: 0, // 
-        radomRest:""
+        radomRest:"",
+        length:5,
+        arr:[]
       }
     },
 
     methods: {
       rodamChange: function (value) {
-
+        
         this.num2 = value
         this.radom = value
-
+         
       },
       radomReturn() {
         this.radomRest=Math.floor(Math.random() * (this.num2 - this.num1))+this.num1
+        
       }
-
+        ,
+       shuffle()
+       {
+             console.log(this.arr)
+         this.createArray();
+         for(let i=this.num1;i<=this.num2;i++)
+         {
+         let j=Math.floor(Math.random() * (this.num2 - this.num1))+this.num1
+      
+         this.swap(this.arr,i,j)
+         }
+         console.log(this.arr[0])
+     
+       }  ,
+       swap(array,i,j)
+       
+       { 
+         let k=array[i]   
+         array[i]=array[j]
+         array[j]=k
+       
+       }
+       ,
+        createArray() {
+   
+          for (var i = this.num1; i < this.num2; i++) {
+            this.arr.push({ name: i })
+          }
+        }
     },
     components: {
 
