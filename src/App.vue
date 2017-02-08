@@ -8,8 +8,6 @@
 <script>
 
   import qwe from './components/test'
-var test
-
   export default {
     name: 'app',
     components: {
