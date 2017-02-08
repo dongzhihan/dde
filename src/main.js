@@ -8,7 +8,10 @@ import qwe from './components/test'
 import ElementUI from 'element-ui'
 import '../node_modules/element-ui/lib/theme-default/index.css'
 import { RadonInstall } from 'radon-ui'
+ 
 
+Vue.prototype.$http = axios
+Vue.use(axios)
 Vue.use(RadonInstall, {
   Modal: true,
   Notification: true,
@@ -48,6 +51,11 @@ const routes = [
   {
     path: '/radom', component: function (resolve) {
     require(['./components/radom.vue'], resolve);
+  }
+  },
+  {
+    path: '/list', component: function (resolve) {
+    require(['./components/list.vue'], resolve);
   }
   }
  
