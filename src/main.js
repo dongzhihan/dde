@@ -53,11 +53,9 @@ const routes = [
     require(['./components/radom.vue'], resolve);
   }
   },
-  {
-    path: '/list', component: function (resolve) {
-    require(['./components/list.vue'], resolve);
-  }
-  }
+ 
+ 
+  { path: '/list', name: 'list', component: resolve => require(['./components/list.vue'], resolve) }
  
 ]
 
