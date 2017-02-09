@@ -7,29 +7,18 @@ import VueRouter from 'vue-router';
 import qwe from './components/test'
 import ElementUI from 'element-ui'
 import '../node_modules/element-ui/lib/theme-default/index.css'
-import { RadonInstall } from 'radon-ui'
+
  
 
-Vue.prototype.$http = axios
-Vue.use(axios)
-Vue.use(RadonInstall, {
-  Modal: true,
-  Notification: true,
-  LoadingBar: true,
-  Preview: true
-})
 
+//Vue.use(axios)
+
+Vue.prototype.$http = axios
 Vue.use(ElementUI)
 Vue.use(VueRouter);
 const Foo = {template: '<div>foo</div>'}
 const Bar = {template: '<div>bar</div>'}
-axios.get('http://jsonplaceholder.typicode.com/users')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+ 
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
 // 通过 Vue.extend() 创建的组件构造器，

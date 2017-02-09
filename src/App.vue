@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+ 
     <qwe></qwe>
   </div>
 </template>
