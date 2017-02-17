@@ -41,10 +41,8 @@
 
         }.bind(this)
         eval(response.data)
-      
-      
- 
-      }.bind(this))
+            }.bind(this));
+     console.log( this.$store.state.message)
     }
 
   }
