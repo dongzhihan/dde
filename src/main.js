@@ -45,7 +45,8 @@ const routes = [
   },
  
  
-  { path: '/list', name: 'list', component: resolve => require(['./components/list.vue'], resolve) }
+  { path: '/list', name: 'list', component: resolve => require(['./components/list.vue'], resolve) },
+    { path: '/test', name: 'test', component: resolve => require(['./components/test.vue'], resolve) }
  
 ]
 
