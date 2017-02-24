@@ -45,7 +45,7 @@
         this.$router.push({path: '/foo'})
 
         //alert("经度：" + info.lat + "维度：" + info.lon);
-
+            
       }
     },
 
