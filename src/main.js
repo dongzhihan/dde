@@ -7,26 +7,19 @@ import VueRouter from 'vue-router';
 import qwe from './components/test'
 import ElementUI from 'element-ui'
 import '../node_modules/element-ui/lib/theme-default/index.css'
-import { RadonInstall } from 'radon-ui'
 
-Vue.use(RadonInstall, {
-  Modal: true,
-  Notification: true,
-  LoadingBar: true,
-  Preview: true
-})
+ 
 
+
+//Vue.use(axios)
+import Vuex from 'vuex'
+Vue.use(Vuex)
+Vue.prototype.$http = axios
 Vue.use(ElementUI)
 Vue.use(VueRouter);
 const Foo = {template: '<div>foo</div>'}
 const Bar = {template: '<div>bar</div>'}
-axios.get('http://jsonplaceholder.typicode.com/users')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+ 
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
 // 通过 Vue.extend() 创建的组件构造器，
@@ -49,9 +42,19 @@ const routes = [
     path: '/radom', component: function (resolve) {
     require(['./components/radom.vue'], resolve);
   }
-  }
+  },
+ 
+ 
+  { path: '/list', name: 'list', component: resolve => require(['./components/list.vue'], resolve) },
+    { path: '/test', name: 'test', component: resolve => require(['./components/test.vue'], resolve) }
+ 
 ]
 
+const store = new Vuex.Store({
+ state: {
+    message: 'Hello!'
+  }
+})
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
 const router = new VueRouter({
@@ -62,7 +65,7 @@ const router = new VueRouter({
 // 记得要通过 router 配置参数注入路由，
 // 从而让整个应用都有路由功能
 const app = new Vue({
-  router
+  router,store
 }).$mount('#app')
 
 /* eslint-disable no-new */

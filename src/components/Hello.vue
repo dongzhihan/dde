@@ -24,9 +24,10 @@
 
 <script>
   import { rdText } from 'radon-ui'
+  
   export default {
 
-    name: 'hello',
+    name: 'dzh',
     data () {
       return {
         msg: 'Welcome to Your Vue.js App',
@@ -40,15 +41,20 @@
         }
       }
     },
+  
     methods: {
       goWeather(){
         this.$router.push({path: '/foo'})
-
+         
         //alert("经度：" + info.lat + "维度：" + info.lon);
+<<<<<<< HEAD
             
+=======
+              
+>>>>>>> cec8280915e3f2d829c8dd291585811d75962bbb
       }
     },
-
+    
     components: {
       rdText
     }

@@ -1,0 +1,141 @@
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+
+
+
+
+
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+<template>
+  <div class="header">
+    <h1> {{ title }} </h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        title: '我是頭部'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+ 
+</style>
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
